@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+    font-size: 3em;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#startBtn { background-color: #4CAF50; color: white; }
+#stopBtn { background-color: #f44336; color: white; }
+#resetBtn { background-color: #2196F3; color: white; }
+#lapBtn { background-color: #FF9800; color: white; }
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#laps div {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+    #display {
+        font-size: 2.5em;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    font-size: 1.5em;
+    color: #555;
+    margin: 20px 0;
+}

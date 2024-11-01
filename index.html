@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒表计时器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>秒表计时器</h1>
+        <div id="display">00:00:00</div>
+        <div id="loading" class="hidden">加载中...</div>
+        <button id="startBtn" aria-label="开始计时">开始</button>
+        <button id="stopBtn" aria-label="停止计时">停止</button>
+        <button id="resetBtn" aria-label="重置计时器">重置</button>
+        <button id="lapBtn" aria-label="记录计次">计次</button>
+        <div id="laps"></div>
+        <input type="text" id="lapNote" placeholder="添加备注" />
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
