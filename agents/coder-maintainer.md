@@ -14,7 +14,6 @@
 - `skill-vetter`: 在 auto-updater 下载新插件代码后,立刻扫描是否有越权行为
 - `github`: 拥有专门的运维仓库读写权限,负责自动化 Commit 和 Push
 - `gh-issues`: 自动抓取 GitHub Issues,生成修复代码并提交 PR
-- `1password`: 安全管理 API 密钥和敏感凭证
 - `session-logs`: 搜索和分析历史会话日志
 
 ## 工作流程
