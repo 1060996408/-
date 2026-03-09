@@ -1,0 +1,46 @@
+name: code-review
+type: debate
+description: 多 Agent 交叉审查代码质量
+
+agents:
+  - id: coder-maintainer
+    role: author
+    task: |
+      你是代码作者。
+      1. 说明这段代码的设计思路
+      2. 解释关键实现细节
+      3. 说明为什么这样设计
+  
+  - id: researcher
+    role: reviewer
+    task: |
+      你是技术审查员。从以下角度审查代码:
+      1. 代码逻辑是否正确
+      2. 是否有潜在的 bug
+      3. 性能是否合理
+      4. 是否符合最佳实践
+      
+      给出评分 (0-10) 和具体建议。
+  
+  - id: knowledge-weaver
+    role: reviewer
+    task: |
+      你是文档和可读性审查员。从以下角度审查:
+      1. 代码是否易读易懂
+      2. 命名是否清晰
+      3. 是否需要注释
+      4. 文档是否完整
+      
+      给出评分 (0-10) 和具体建议。
+
+rounds: 2
+decision_rule: |
+  计算两位审查员的平均分:
+  - 平均分 >= 8: 通过,可以合并
+  - 平均分 6-7: 需要小幅修改
+  - 平均分 < 6: 打回重做
+
+output:
+  - 两位审查员的评分和建议
+  - 平均分
+  - 最终决策 (通过/修改/重做)
